@@ -75,7 +75,7 @@ However, in this repository, we'll make use of Terraform to deploy to AWS.
 
 ### AWS Docker Host Template (Terraform)
 
-You will find all the files needed to deploy via Terraform under the folder `terraform`. Here I've made a reusable Terraform template that provisions:
+You will find all the files needed to deploy via Terraform in the project's root directory. Here I've made a reusable Terraform template that provisions:
 - An Ubuntu 22.04 EC2 host with Docker + compose
 - Optional Elastic IP
 - Parameterized Security Group (SSH + app ports)
@@ -201,10 +201,12 @@ Allow a few minutes for Traefik to provision certificates.
 ## Adding a service
 
 1. Create a new folder in repo root.
-2. Add its `docker-compose.yml`, include Traefik labels, set networks: [my_network].
+2. Add its `docker-compose.yml`, include Traefik labels, set network to: `my_network`.
 3. Add folder path to `start_and_update.sh`.
 4. Add sub-domain entry to `prod.auto.tfvars`.
 5. Run `terraform apply`.
+
+Need inspiration for new services to deploy? Visit [Awesome Docker Compose](https://awesome-docker-compose.com/)
 
 ## Removing a service
 
