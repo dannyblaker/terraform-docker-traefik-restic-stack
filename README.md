@@ -64,7 +64,7 @@ We also have a third service, which is Traefik itself.
 - **traefik** - a modern HTTP reverse proxy and load balancer that makes deploying microservices easy.
 
 ### Traefik
-- A single instance of Traefik routes and manages traffic for all services. It runs on a docker network named `mynetwork`
+- A single instance of Traefik routes and manages traffic for all services. It runs on a docker network named `my_network`
 
 ### Services
 - Each service has it's own folder, with a dedicated `docker-compose.yml` and `.env`
@@ -188,9 +188,9 @@ restic init
 bash pull_images.sh
 ```
 
-2. create `mynetwork` docker network 
+2. create `my_network` docker network 
   
-`docker network create mynetwork`
+`docker network create my_network`
 
 3.  Start services
  
