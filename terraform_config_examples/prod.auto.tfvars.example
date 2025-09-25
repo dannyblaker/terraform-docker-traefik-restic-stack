@@ -30,4 +30,4 @@ manage_zone         = false        # true to create a new hosted zone
 root_domain         = "example.com" # used for either new zone or existing zone records
 hosted_zone_id      = ""           # set if manage_zone = false and you want records in an existing zone
 create_dns_records  = false
-subdomains          = ["n8n", "mautic", "traefik"]
+subdomains          = ["n8n", "traefik"]
