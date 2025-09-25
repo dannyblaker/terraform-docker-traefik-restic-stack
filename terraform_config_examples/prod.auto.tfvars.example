@@ -1,0 +1,33 @@
+# --- Region / Account controls ---
+region               = "ap-southeast-2"
+allowed_account_ids  = []          # e.g., ["123456789012"]
+assume_role_arn      = ""          # e.g., "arn:aws:iam::123456789012:role/Deployment"
+
+# --- Tags ---
+project              = "my-services"
+environment          = "prod"
+additional_tags = {
+  Owner = "devops@example.com"
+}
+
+# --- EC2 / Networking ---
+instance_type        = "t3a.medium"
+root_volume_size_gb  = 60
+availability_zone    = ""          # e.g., "ap-southeast-2a"
+ssh_allowed_cidrs    = ["203.0.113.10/32"]   # leave [] to disable SSH
+http_allowed_cidrs   = ["0.0.0.0/0"]
+app_ports            = [80, 443, 8080]
+use_eip              = true
+key_name             = ""          # e.g., "my-keypair" (optional)
+
+# --- S3 Backups ---
+create_backup_bucket       = true
+backup_bucket_prefix       = "my-services-backup"
+backup_bucket_force_destroy = false
+
+# --- DNS ---
+manage_zone         = false        # true to create a new hosted zone
+root_domain         = "example.com" # used for either new zone or existing zone records
+hosted_zone_id      = ""           # set if manage_zone = false and you want records in an existing zone
+create_dns_records  = false
+subdomains          = ["n8n", "mautic", "traefik"]

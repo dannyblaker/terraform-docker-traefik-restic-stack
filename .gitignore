@@ -1,0 +1,12 @@
+.env
+letsencrypt
+aws
+awscli.zip
+creds/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+.terraform/
+backup_volumes
+letsencrypt_traefik
+restic_password.txt

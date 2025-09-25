@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  redis_n8n:
+    container_name: redis_n8n
+    image: redis:latest
+    restart: always
+    command: redis-server --requirepass ${REDIS_N8N_PASSWORD}
+    volumes:
+      - redis_n8n_data:/data
+    networks:
+      - my_network
+      
+
+volumes:
+  redis_n8n_data:
+    external: true
+
+networks:
+  my_network:
+    external: true
