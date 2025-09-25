@@ -1,5 +1,6 @@
 
 - [About](#about)
+  - [Stack overview](#stack-overview)
   - [Demo services](#demo-services)
     - [Traefik](#traefik)
     - [Services](#services)
@@ -37,6 +38,11 @@ I have been deploying and maintaining self-hosted services for enterprise custom
 
 **Important caveat**: This codebase is not appropriate for services that receive large amounts of traffic, however, for services that receive a relatively small / reasonable amount of traffic - which will be most services you deploy - it works well and saves considerable hosting costs, which makes all parties happy. That said, Traefik can be configured for large amounts of traffic by using Docker Swarm or Kubernetes.
 
+**You are most welcome to use this code in your commercial projects, all that I ask in return is that you credit my work by providing a link back to this repository.**
+
+Thank you & Enjoy!
+
+## Stack overview
 
 | Tool | About | Role |
 | -------- | -------- | -------- |
