@@ -1,38 +1,10 @@
-
-- [About](#about)
-  - [Stack overview](#stack-overview)
-  - [Demo services](#demo-services)
-    - [Traefik](#traefik)
-    - [Services](#services)
-- [Deployment](#deployment)
-  - [Part 1 - Terraform](#part-1---terraform)
-    - [AWS Docker Host Template (Terraform)](#aws-docker-host-template-terraform)
-    - [Prereqs](#prereqs)
-    - [Quickstart](#quickstart)
-    - [Notes](#notes)
-    - [Cleanup](#cleanup)
-    - [Security](#security)
-  - [Part 2 - Prepare server](#part-2---prepare-server)
-      - [Configure backups via Restic](#configure-backups-via-restic)
-      - [Start services](#start-services)
-- [Maintenance](#maintenance)
-  - [Adding a service](#adding-a-service)
-  - [Removing a service](#removing-a-service)
-  - [Patching services](#patching-services)
-    - [All services](#all-services)
-    - [A single service](#a-single-service)
-  - [Backups](#backups)
-    - [Perform a backup](#perform-a-backup)
-    - [Restore a Backup](#restore-a-backup)
-  - [Notes](#notes-1)
-  - [Redis](#redis)
-    - [docker-compose.yml](#docker-composeyml)
-
-
+| Docker | Traefik Proxy | Terraform | Restic |
+|--------|----------|-----------|--------|
+| [![docker](docker.png)](https://www.docker.com) | [![traefik](traefik.png)](https://traefik.io) | [![terraform](terraform.png)](https://www.terraform.io) | [![restic](restic.png)](https://restic.net) |
 
 # About
 
-This repository demonstrates how you can leverage Docker, Traefik, Terraform and Restic, to deploy multiple services to a single server in a way that is vertically scalable, and simple to secure, deploy, update, backup, restore and maintain. The best part… adding new services is as easy as adding a few files and modifying a couple of lines of code.
+This repository demonstrates how you can leverage Docker, Traefik Proxy, Terraform and Restic, to deploy multiple services to a single server in a way that is vertically scalable, and simple to secure, deploy, update, backup, restore and maintain. The best part… adding new services is as easy as adding a few files and modifying a couple of lines of code.
 
 I have been deploying and maintaining self-hosted services for enterprise customers since 2009. In 2025, this stack - and similar stacks - are what I use to reduce deployment time from days to minutes.
 
@@ -41,6 +13,7 @@ I have been deploying and maintaining self-hosted services for enterprise custom
 **You are most welcome to use this code in your commercial projects, all that I ask in return is that you credit my work by providing a link back to this repository.**
 
 Thank you & Enjoy!
+
 
 ## Stack overview
 
@@ -199,10 +172,7 @@ bash start_and_update.sh
 ```
 Allow a few minutes for Traefik to provision certificates.
 
-
-
 # Maintenance
-
 
 ## Adding a service
 
@@ -280,7 +250,7 @@ bash helper_scripts/backup/restore.sh
 
 ## Notes
 
-## Redis
+### Redis
 
 To add a redis connection in n8n: 
 
